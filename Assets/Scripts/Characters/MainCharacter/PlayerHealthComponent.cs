@@ -9,5 +9,9 @@ public class PlayerHealthComponent : HealthComponent
     {
         SceneManager.LoadScene(0);
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Border"))
+            Die();
+    }
 }
